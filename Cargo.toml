@@ -1,0 +1,23 @@
+[package]
+name = "article_site"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#Rocket
+rocket = "0.5.0-rc.2"
+
+#Templating
+tera = { version = "1", default-features = true} #moteur de template
+rocket_dyn_templates = {version = "0.1.0-rc.2", features = ["tera"]}
+
+#Diesel
+diesel = { version = "2.0.0", features = ["mysql"] } 
+    #Ici on choisit mysql, en fonction de votre bdd, vous auriez pu choisir : 
+    #["postgres"] ou ["sqlite"]
+
+#Autres
+dotenvy = "0.15" #permet de lire des fichiers d'environnements (.env)
+serde = { version = "1.0", features = ["derive"] }

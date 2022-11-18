@@ -1,0 +1,9 @@
+<body>
+    <html>
+        <ul>
+        {% for list_item in list %}
+            <li>{{ list_item.id }} - <strong>{{list_item.libelle}}</strong></li>
+        {% endfor %}
+    </ul>
+    </html>
+</body>
