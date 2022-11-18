@@ -44,7 +44,6 @@ fn rocket() -> _ {
 
 pub fn establish_connection() -> SQLConnection {
     dotenv().ok(); //charge les variables présente dans le .env dans l'environnement
-
     let database_url = env::var("DATABASE_URL") //on tente de récuperer l'url de la BDD depuis l'environnement
         .expect("DATABASE_URL must be set"); //si elle n'existe pas on lève une erreur
 
